@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@400;500&display=swap');
+
+:root{
+    --primary:"#1A242D";
+    --secondary:"#B2293D";
+    --softlight:"#ECCE8E";
+    --primary-font: 'Playfair Display', serif;
+    --secondary-font: 'Lato', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+    color:var(--primary);
+    font-family: var(--secondary-font);
+}
