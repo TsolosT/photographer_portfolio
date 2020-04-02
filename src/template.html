@@ -6,7 +6,97 @@
 
 </head>
 <body>
-        <h1>Welcome people</h1>
-       
+    <!-- Navbar section -- starts -->
+    <header>
+        <nav>
+            <a href="#hero"><img class="logo" src="assets/imgs/logo.png" alt="Joe Hart Photography Logo"></a>
+            <ul class="nav_menu">
+                <li><a class="nav__link" data-page="work" href="#work">Work</a></li>
+                <li><a class="nav__link" data-page="About" href="#about">About</a></li>
+                <li><a class="nav__link" data-page="contact" href="#contact">Contact</a></li>
+            </ul>
+            <i id="toggleNav" class="fas fa-bars fa-2x"></i>
+        </nav>
+    </header>
+    <!-- Navbar section -- ends -->
+    <!-- Hero section -- starts -->
+        <div id="hero" class="hero" name="hero">
+            <!-- Background-right -->
+            <img class="hero__img" src="assets/imgs/photographer_2.1.1.jpg" alt="Random Photographer with a dslr camera">
+            <video autoplay muted class="hero__video" src="assets/videos/night_sky.mp4"></video>
+            <!-- Content-Left -->
+            <section class="hero__content">
+                <section class="content__header">
+                    <h1 class="title">Joe Hart</h1>
+                    <h4 class="subtitle subtitle--has-indent">Photography</h4>
+                </section>
+                <section class="content__content">
+                    <button class="btn">My Work</button>
+                    <button class="btn btn__full--secondary">Contact Me</button>
+                </section>
+                <section class="content__footer">
+                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter  fa-1x"></i></>
+                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-1x"></i></a>
+                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f fa-1x"></i></a>
+                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin-in fa-1x"></i></a>
+                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer">  <i class="fab fa-behance fa-1x"></i></a>
+                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest fa-1x"></i></a>
+                </section>
+            </section>
+            <!-- Scroll Down -- Bottom -->
+            <a href="#work" class="arrow__down"><i class="fas fa-chevron-down fa-3x"></i></a>
+        </div>
+       <!-- Hero section -- ends -->
+       <!-- Work Section -- starts -->
+       <section id="work" class="work" name="work">
+            <header class="section__title">
+                <h1 class="subtitle is--softlight">Latest Work</h1>
+                <span class="line__s b__bot--softlight"></span>
+                <span class="line__m b__bot--softlight"></span>
+            </header>
+            <section class="gallery__row">
+                <section class="gallery__column">
+                    <img src="assets/imgs/work_1.jpg" alt="" class="gallery__img">
+                    <img src="assets/imgs/work_2.jpg" alt="" class="gallery__img">
+                    <img src="assets/imgs/work_3.jpg" alt="" class="gallery__img">
+                </section>
+                <section class="gallery__column">
+                    <img src="assets/imgs/work_6.jpg" alt="" class="gallery__img">
+                    <img src="assets/imgs/work_5.jpg" alt="" class="gallery__img">
+                    <img src="assets/imgs/work_4.jpg" alt="" class="gallery__img">
+                </section>
+                <section class="gallery__column">
+                    <img src="assets/imgs/work_7.jpg" alt="" class="gallery__img">
+                    <img src="assets/imgs/work_8.jpg" alt="" class="gallery__img">
+                </section>
+            </section>
+            <button class="btn btn__size--m m__auto">See All My Work</button>
+       </section>
+       <!-- Work Section --ends -->
+       <!-- About Section -- starts -->
+       <section id="about" class="about" name="about">
+            <img src="assets/imgs/about_img.jpg" alt="" class="img__circle">
+            <section class="about__content">
+                <header class="section__title">
+                    <h1 class="subtitle is--secondary">About</h1>
+                    <span class="line__s b__bot--secondary"></span>
+                    <span class="line__m b__bot--secondary"></span>
+                </header>
+                <section class="section__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui vel asperiores beatae quam voluptatem totam deserunt esse vitae assumenda, ab ea voluptas ratione officia! Tempore eius sapiente quos incidunt.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sapiente laborum modi quidem soluta repellendus eos facilis distinctio dolores possimus vitae similique incidunt fugiat, quibusdam error, magni eaque rerum corrupti.</p>
+                </section>
+            </section>
+        </section>
+        <!-- About Section --ends -->
+         <!-- Contact Section -- starts -->
+    <section id="contact" class="contact" name="contact">
+    </section>
+    <!-- Contact Section --ends -->
+    <!-- Footer Section -- starts -->
+    <footer class="footer" >
+
+    </footer>
+    <!-- Footer Section --ends -->
 </body>
 </html>

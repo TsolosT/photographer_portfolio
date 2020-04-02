@@ -43,7 +43,7 @@ module.exports = {
         },
         {
             test: /\.mp4$/,
-            use: 'file-loader?name=videos/[name].[hash].[ext]'
+            use: 'file-loader?name=assets/videos/[name].[hash].[ext]'
         }
     ]
   }
