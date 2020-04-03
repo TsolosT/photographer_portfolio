@@ -91,12 +91,45 @@
         <!-- About Section --ends -->
          <!-- Contact Section -- starts -->
     <section id="contact" class="contact" name="contact">
+        <header class="section__title">
+            <h1 class="subitle">Contact</h1>
+            <span class="line__s"></span>
+            <span class="line__m"></span>
+        </header>
+        <section class="gallery__row">
+            <p class="section__text">
+                Let me know if you want to work together
+                or may want to join me on adventures.
+            </p>
+        </section>
+        <section class="gallery__column m__auto">
+            <section class="gallery__row flex__d-column">
+                <div class="form__title">
+                    <h1 class="subtitle">Send Me A Message</h1>
+                </div>
+                <div class="control__input">
+                    <label class="label" for="name">Name <small>(Required)</small></label>
+                    <input class="input" name="name" type="text" placeholder="e.g. John Maet" required>
+                </div>
+                <div class="control__input">
+                    <label class="label" for="email">Email <small>(Required)</small></label>
+                    <input class="input" name="email" type="email" placeholder="e.g. your@mail.com" required>
+                </div>
+                <div class="control__input">
+                    <label class="label" for="msg">Message <small>(Required)</small></label>
+                    <textarea class="textarea" name="msg" id="msg" cols="30" rows="10" required></textarea>
+                </div>
+                <button class="btn btn__outline--softlight m__auto">Send <i class="far fa-envelope "></i></button>
+            </section>
+        </section>
     </section>
     <!-- Contact Section --ends -->
     <!-- Footer Section -- starts -->
     <footer class="footer" >
-
+        <h3 class="footer_title">Case Study Portfolio - <a href="#">Code<i class="fas fa-code"></i></a></h3>
     </footer>
     <!-- Footer Section --ends -->
+    <!-- Go top btn -->
+    <a href="#hero" class="btn btn__goTop" title="Go To Top"><i class="fas fa-chevron-up fa-3x"></i></a>
 </body>
 </html>
