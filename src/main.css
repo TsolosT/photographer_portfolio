@@ -12,6 +12,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html,body{
+    height: 100%;
+    width: 100%;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -106,14 +110,15 @@ body{
     color:#fff;
 }
 /* Navigation Section */
-header{
-    box-sizing: 0px 3px 10px rgba(0,0,0,0.3);
+.navbar{
+    /* box-shadow: 0px 3px 10px rgba(0,0,0,0.3); */
     position: sticky;
     top:0;
     background: transparent;
     z-index: 100;
+    overflow: hidden;
 }
-nav{
+.navbar__nav{
     min-height: 10vh;
     margin: auto;
     width: 90%;
@@ -121,20 +126,108 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-header a,
-nav ul {
+.navbar a,
+.navbar__nav .nav_menu {
     font-size: 1.5rem;
     flex:1;
 }
-nav ul{
+.navbar__nav .nav_menu{
     list-style: none;
     display: flex;
     justify-content:flex-end;
 }
-#toggleNav{
+#menuHam{
     display: none;
-    color:var(--primary,#1A242D);
-    color:#1A242D;
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    cursor: pointer;
+}
+.menu-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1002;
+  }
+  
+  .menu-icon {
+    position: absolute;
+    width: 27px;
+    height: 18px;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+  
+  .menu-line {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+  }
+  .menu-line-2 {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .menu-line-3 {
+    bottom: 0;
+  }
+  #menuHam.open .menu-line-1 {
+   background-color:#B2293D;
+    transform: translateY(11px) translateY(-50%) rotate(-45deg);
+  }
+  #menuHam.open .menu-line-2 {
+    opacity: 0;
+  }
+  #menuHam.open .menu-line-3 {
+    background-color:#B2293D;
+    transform: translateY(-7px) translateY(50%) rotate(45deg);
+  }
+.menu__circle{
+  background-color: transparent;
+  width: 54px;
+ height: 44px;
+    position: absolute;
+    margin: -12px -14px;
+  border-radius: 50%;
+  transform: scale(1);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+#menuHam:hover .menu__circle {
+    transform: scale(1.09);
+    background-color: rgba(236, 206, 142,0.7);
+}
+#menuHam.open .menu__circle {
+    transform: scale(60);
+  }
+.navbar__nav.open{
+    width: 100%;
+}
+.navbar__nav .nav_menu.open li a{
+    font-size: 2.5em;
+}
+.navbar__nav .nav_menu.open{
+  background-color: rgba(236, 206, 142,0.7);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__nav .nav_menu.open>li{
+    margin-bottom: 10px;
 }
 .logo {
     padding: 2px 0;
@@ -159,42 +252,46 @@ nav ul{
 }
 @media screen and (max-width: 801px)
 {
-    .nav_menu
+    .navbar__nav .nav_menu
     {
         display: none;
     }
-    #toggleNav{
+    #menuHam{
         display: block;
     }
 }
 /* Hero Section  */
 .hero{
     min-height: 100vh;
-    position: relative;
+    /* position: relative; */
     overflow: hidden;
+    background:#fff;
 }
 .hero__img{
-    position: absolute;
-    left: 10%;
-    top: 0;
+    position: absolute; 
+     left: 0; 
+     top: 0;
     height: 100%;
-    width: 100%;
+    width: 100%; 
     z-index: 1;
     object-fit: cover;
-    mix-blend-mode: lighten;
+    mix-blend-mode: screen;
     animation: reveal 1s ease 0.5s forwards;
     opacity: 0;
 }
 .hero__video{
-    position: absolute;
-    left: 10%;
-    top: 0;
-    /* height: 100%; */
-    height: 116%;
-    width: 100%;
+    position: absolute; 
+    left: 0;
+     top: 0;
+     height: 100%; 
+    width: 100%; 
     object-fit: cover;
     animation: reveal 3s ease 1s forwards;
     opacity: 0;
+}
+.hero__bg{
+    width: 100%;
+    height: 100%;   
 }
 @keyframes reveal{
     from {
@@ -206,14 +303,13 @@ nav ul{
 }
 .hero .arrow__down{
     position: absolute;
-    bottom: 64px;
+    bottom: 0px;
     left:49%;
 }
 .arrow__down{
     z-index: 10;
     text-decoration: none;;
-    color:var(--primary);
-    color:#1A242D;
+    color:rgba(161, 28, 48,0.8);
 }
 .arrow__down:hover,
 .arrow__down:active{
@@ -228,9 +324,7 @@ nav ul{
     width: 100%;
     height: 100%;
     align-items:flex-start;
-    justify-content:flex-start;
-    padding: 20px;
-    margin: 13%;
+    padding: 10%;
 }
 .content__header,.content__content{
     margin-bottom: 20px;
@@ -240,8 +334,7 @@ nav ul{
     padding: 0 12px;
 }
 .icon__link{
-    color:var(--primary,#1A242D);
-    color:#1A242D;
+     color: #1A242D;
     text-decoration: none;
     margin:2px 10px;
 }
@@ -256,12 +349,10 @@ nav ul{
     .hero__content{
         height: 100vh;
         width: 100vw;
-        background: rgba( 250, 255, 255, 0.3);
-        margin: 13%;
         margin-bottom: 0;
     }
    .hero .arrow__down{
-       bottom: 40px;
+       bottom:-40px;
    }
 }
 
@@ -330,12 +421,21 @@ nav ul{
     opacity: 0.7;
     border:1px solid #ECCE8E;
 }
-/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
       -ms-flex: 50%;
       flex: 50%;
       max-width: 50%;
+    }
+    .section__title{
+         margin: 0;
+    }
+    .line__m{
+        width: 250px;
+    }
+    .work .gallery__row .gallery__column{
+        flex: 50%;
+        max-width: 42%;
     }
   }
   
@@ -379,6 +479,20 @@ nav ul{
 }
 .b__bot--secondary{
     border-bottom-color: #B2293D;
+}
+@media screen and (max-width:800px)
+{
+    .about{
+        flex-wrap: wrap;
+    }
+    .img__circle{
+        height: 247px;
+        width: 262px;
+    }
+    .section__text{
+        margin: 10px;
+        font-size:0.9em;
+    }
 }
 /* Contact */
 .contact .gallery__column{
@@ -443,7 +557,16 @@ nav ul{
     resize: none;
     padding: 20px;   
 }
-
+@media screen and (max-width:500px)
+{
+    .contact #form{
+        max-width: 100%;
+        flex:100%;
+    }
+    .contact #form .flex__d-column{
+        flex-direction: row;
+    }
+}
 /* Footer */
 .footer{
     width: 100%;
@@ -473,8 +596,16 @@ nav ul{
 .footer_title a:focus{
     color:#B2293D;
 }
+@media screen and (max-width:600px)
+{
+    .footer_title,
+    .footer_title a{
+        font-size: 0.8em;
+    }
+}
 /* btn gotop */
 .btn__goTop{
+    display: none;
     position: fixed;
     bottom: 40px;
     right: 20px;

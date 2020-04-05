@@ -7,25 +7,32 @@
 </head>
 <body>
     <!-- Navbar section -- starts -->
-    <header>
-        <nav>
+    <header class="navbar">
+        <nav class="navbar__nav">
             <a href="#hero"><img class="logo" src="assets/imgs/logo.png" alt="Joe Hart Photography Logo"></a>
             <ul class="nav_menu">
                 <li><a class="nav__link" data-page="work" href="#work">Work</a></li>
                 <li><a class="nav__link" data-page="About" href="#about">About</a></li>
                 <li><a class="nav__link" data-page="contact" href="#contact">Contact</a></li>
             </ul>
-            <i id="toggleNav" class="fas fa-bars fa-2x"></i>
+            <div id="menuHam">
+                <span class="menu__circle"></span>
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                      <span class="menu-line menu-line-1"></span>
+                      <span class="menu-line menu-line-2"></span>
+                      <span class="menu-line menu-line-3"></span>
+                    </span>
+                  </a>
+            </div>
+           
         </nav>
     </header>
     <!-- Navbar section -- ends -->
     <!-- Hero section -- starts -->
         <div id="hero" class="hero" name="hero">
-            <!-- Background-right -->
-            <img class="hero__img" src="assets/imgs/photographer_2.1.1.jpg" alt="Random Photographer with a dslr camera">
-            <video autoplay muted class="hero__video" src="assets/videos/night_sky.mp4"></video>
-            <!-- Content-Left -->
-            <section class="hero__content">
+              <!-- Content-Left -->
+              <section class="hero__content">
                 <section class="content__header">
                     <h1 class="title">Joe Hart</h1>
                     <h4 class="subtitle subtitle--has-indent">Photography</h4>
@@ -43,6 +50,12 @@
                     <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest fa-1x"></i></a>
                 </section>
             </section>
+            <!-- Background-right -->
+            <section class="hero__bg">
+                <img class="hero__img" src="assets/imgs/photographer_2.1.1.jpg" alt="Random Photographer with a dslr camera">
+                <video autoplay muted class="hero__video" src="assets/videos/sun.mp4"></video>
+            </section>
+          
             <!-- Scroll Down -- Bottom -->
             <a href="#work" class="arrow__down"><i class="fas fa-chevron-down fa-3x"></i></a>
         </div>
@@ -102,7 +115,7 @@
                 or may want to join me on adventures.
             </p>
         </section>
-        <section class="gallery__column m__auto">
+        <section  id="form" class="gallery__column m__auto">
             <section class="gallery__row flex__d-column">
                 <div class="form__title">
                     <h1 class="subtitle">Send Me A Message</h1>
@@ -126,10 +139,10 @@
     <!-- Contact Section --ends -->
     <!-- Footer Section -- starts -->
     <footer class="footer" >
-        <h3 class="footer_title">Case Study Portfolio - <a href="#">Code<i class="fas fa-code"></i></a></h3>
+        <h3 class="footer_title">Case Study Portfolio - <a href="#">See Git Rep.<i class="fas fa-code"></i></a></h3>
     </footer>
     <!-- Footer Section --ends -->
     <!-- Go top btn -->
-    <a href="#hero" class="btn btn__goTop" title="Go To Top"><i class="fas fa-chevron-up fa-3x"></i></a>
+    <a id="btnGoTop" href="#hero" class="btn btn__goTop" title="Go To Top"><i class="fas fa-chevron-up fa-3x"></i></a>
 </body>
 </html>
