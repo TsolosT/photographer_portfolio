@@ -32,7 +32,7 @@
     <!-- Hero section -- starts -->
         <div id="hero" class="hero" name="hero">
               <!-- Content-Left -->
-              <section class="hero__content">
+              <section class="hero__content" data-aos="zoom-in" data-aos-delay="2000" data-aos-offset="200">
                 <section class="content__header">
                     <h1 class="title">Joe Hart</h1>
                     <h4 class="subtitle subtitle--has-indent">Photography</h4>
@@ -42,12 +42,12 @@
                     <button class="btn btn__full--secondary">Contact Me</button>
                 </section>
                 <section class="content__footer">
-                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter  fa-1x"></i></>
-                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-1x"></i></a>
-                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f fa-1x"></i></a>
-                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin-in fa-1x"></i></a>
-                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer">  <i class="fab fa-behance fa-1x"></i></a>
-                    <a class="icon__link" href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest fa-1x"></i></a>
+                    <a class="icon__link" href="#"><i class="fab fa-twitter  fa-1x"></i></>
+                    <a class="icon__link" href="#"><i class="fab fa-instagram fa-1x"></i></a>
+                    <a class="icon__link" href="#"><i class="fab fa-facebook-f fa-1x"></i></a>
+                    <a class="icon__link" href="#"><i class="fab fa-linkedin-in fa-1x"></i></a>
+                    <a class="icon__link" href="#"><i class="fab fa-behance fa-1x"></i></a>
+                    <a class="icon__link" href="#"><i class="fab fa-pinterest fa-1x"></i></a>
                 </section>
             </section>
             <!-- Background-right -->
@@ -67,20 +67,20 @@
                 <span class="line__s b__bot--softlight"></span>
                 <span class="line__m b__bot--softlight"></span>
             </header>
-            <section class="gallery__row">
+            <section class="gallery__row" data-aos="fade-up">
                 <section class="gallery__column">
-                    <img src="assets/imgs/work_1.jpg" alt="" class="gallery__img">
-                    <img src="assets/imgs/work_2.jpg" alt="" class="gallery__img">
-                    <img src="assets/imgs/work_3.jpg" alt="" class="gallery__img">
+                    <img src="assets/imgs/work_1.jpg" alt="A lion laying down" class="gallery__img">
+                    <img src="assets/imgs/work_2.jpg" alt="A exotic bird " class="gallery__img">
+                    <img src="assets/imgs/work_3.jpg" alt="A Foggy Mountain view" class="gallery__img">
                 </section>
                 <section class="gallery__column">
-                    <img src="assets/imgs/work_6.jpg" alt="" class="gallery__img">
-                    <img src="assets/imgs/work_5.jpg" alt="" class="gallery__img">
-                    <img src="assets/imgs/work_4.jpg" alt="" class="gallery__img">
+                    <img src="assets/imgs/work_6.jpg" alt="A Snow Mountain" class="gallery__img">
+                    <img src="assets/imgs/work_5.jpg" alt="A friendly fox " class="gallery__img">
+                    <img src="assets/imgs/work_4.jpg" alt="A snow Mountain view" class="gallery__img">
                 </section>
                 <section class="gallery__column">
-                    <img src="assets/imgs/work_7.jpg" alt="" class="gallery__img">
-                    <img src="assets/imgs/work_8.jpg" alt="" class="gallery__img">
+                    <img src="assets/imgs/work_7.jpg" alt="your alt here" class="gallery__img">
+                    <img src="assets/imgs/work_8.jpg" alt="a foggy sea" class="gallery__img">
                 </section>
             </section>
             <button class="btn btn__size--m m__auto">See All My Work</button>
@@ -122,7 +122,7 @@
                 </div>
                 <div class="control__input">
                     <label class="label" for="name">Name <small>(Required)</small></label>
-                    <input class="input" name="name" type="text" placeholder="e.g. John Maet" required>
+                    <input class="input" name="name" type="text" placeholder="e.g. John Maet" required  pattern='[A-Za-z]' minlength="3">
                 </div>
                 <div class="control__input">
                     <label class="label" for="email">Email <small>(Required)</small></label>
@@ -144,5 +144,11 @@
     <!-- Footer Section --ends -->
     <!-- Go top btn -->
     <a id="btnGoTop" href="#hero" class="btn btn__goTop" title="Go To Top"><i class="fas fa-chevron-up fa-3x"></i></a>
+    <!-- Gallery modal  -->
+    <div id="galleryModal" class="gallery__modal">
+        <span class="modal__close">&times;</span>
+        <img class="gallery__modal__content" id="displayedImg">
+        <div class="gallery__modal__caption"></div>
+    </div>
 </body>
 </html>
