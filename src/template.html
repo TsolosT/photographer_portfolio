@@ -11,9 +11,9 @@
         <nav class="navbar__nav">
             <a href="#hero"><img class="logo" src="assets/imgs/logo.png" alt="Joe Hart Photography Logo"></a>
             <ul class="nav_menu">
-                <li><a class="nav__link" data-page="work" href="#work">Work</a></li>
-                <li><a class="nav__link" data-page="About" href="#about">About</a></li>
-                <li><a class="nav__link" data-page="contact" href="#contact">Contact</a></li>
+                <li><a class="nav__link" href="#work" data-class="work">Work</a></li>
+                <li><a class="nav__link" href="#about" data-class="about">About</a></li>
+                <li><a class="nav__link" href="#contact" data-class="contact">Contact</a></li>
             </ul>
             <div id="menuHam">
                 <span class="menu__circle"></span>
@@ -30,9 +30,9 @@
     </header>
     <!-- Navbar section -- ends -->
     <!-- Hero section -- starts -->
-        <div id="hero" class="hero" name="hero">
+        <section id="hero" class="hero" name="hero">
               <!-- Content-Left -->
-              <section class="hero__content" data-aos="zoom-in" data-aos-delay="2000" data-aos-offset="200">
+              <section class="hero__content">
                 <section class="content__header">
                     <h1 class="title">Joe Hart</h1>
                     <h4 class="subtitle subtitle--has-indent">Photography</h4>
@@ -58,27 +58,27 @@
           
             <!-- Scroll Down -- Bottom -->
             <a href="#work" class="arrow__down"><i class="fas fa-chevron-down fa-3x"></i></a>
-        </div>
+        </section>
        <!-- Hero section -- ends -->
        <!-- Work Section -- starts -->
-       <section id="work" class="work" name="work">
+       <section id="work" class="work" data-map="main" name="work">
             <header class="section__title">
                 <h1 class="subtitle is--softlight">Latest Work</h1>
                 <span class="line__s b__bot--softlight"></span>
                 <span class="line__m b__bot--softlight"></span>
             </header>
-            <section class="gallery__row" data-aos="fade-up">
-                <section class="gallery__column">
+            <section class="gallery__row">
+                <section class="gallery__column" data-aos="fade-up" data-aos-offset="180">
                     <img src="assets/imgs/work_1.jpg" alt="A lion laying down" class="gallery__img">
                     <img src="assets/imgs/work_2.jpg" alt="A exotic bird " class="gallery__img">
                     <img src="assets/imgs/work_3.jpg" alt="A Foggy Mountain view" class="gallery__img">
                 </section>
-                <section class="gallery__column">
+                <section class="gallery__column" data-aos="fade-up" data-aos-offset="250">
                     <img src="assets/imgs/work_6.jpg" alt="A Snow Mountain" class="gallery__img">
                     <img src="assets/imgs/work_5.jpg" alt="A friendly fox " class="gallery__img">
                     <img src="assets/imgs/work_4.jpg" alt="A snow Mountain view" class="gallery__img">
                 </section>
-                <section class="gallery__column">
+                <section class="gallery__column" data-aos="fade-up" data-aos-offset="300">
                     <img src="assets/imgs/work_7.jpg" alt="your alt here" class="gallery__img">
                     <img src="assets/imgs/work_8.jpg" alt="a foggy sea" class="gallery__img">
                 </section>
@@ -87,7 +87,7 @@
        </section>
        <!-- Work Section --ends -->
        <!-- About Section -- starts -->
-       <section id="about" class="about" name="about">
+       <section id="about" class="about" data-map="main" name="about">
             <img src="assets/imgs/about_img.jpg" alt="" class="img__circle">
             <section class="about__content">
                 <header class="section__title">
@@ -103,7 +103,7 @@
         </section>
         <!-- About Section --ends -->
          <!-- Contact Section -- starts -->
-    <section id="contact" class="contact" name="contact">
+      <section id="contact" class="contact" data-map="main" name="contact">
         <header class="section__title">
             <h1 class="subitle">Contact</h1>
             <span class="line__s"></span>
@@ -135,7 +135,7 @@
                 <button class="btn btn__outline--softlight m__auto">Send <i class="far fa-envelope "></i></button>
             </section>
         </section>
-    </section>
+     </section>
     <!-- Contact Section --ends -->
     <!-- Footer Section -- starts -->
     <footer class="footer" >
